@@ -1,6 +1,7 @@
-function Lunbo() {
+var $lunbo = (function () {
     var imgList = ["img/b5.png", "img/b1.png", "img/b2.png", "img/b3.png", "img/b4.png", "img/b5.png", "img/b1.png"];
-    this.show = function (conf) {
+    function show(conf) {
+    // this.show = function (conf) {
         //添加slide
         var $slider = $("<div class='slider' id='slider'></div>");
         $("#box").append($slider);
@@ -153,4 +154,7 @@ function Lunbo() {
         //自动轮播
         timer = setInterval(nextImage, 3000);
     }
-}
+    return {
+        show: show
+    };
+}());
